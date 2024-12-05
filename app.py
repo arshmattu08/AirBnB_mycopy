@@ -6,6 +6,7 @@ import random
 import pydeck as pdk
 from dotenv import load_dotenv
 from utils.b2 import B2
+from utils.basic_clean import *
 
 # Add the utils directory to the Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'utils')))
@@ -49,6 +50,7 @@ if st.session_state.page == "main":
 
 # Fetch data from Backblaze
 data = fetch_data()
+print(data.head(5))
 if data is not None:
     st.write("Data loaded successfully.")
     st.dataframe(data.head())
@@ -98,19 +100,23 @@ if st.session_state.page == "buyer":
     )
 
     st.pydeck_chart(deck)
-    
+
 # Rough Draft Seller
 elif st.session_state.page == "seller":
     # Sidebar for Seller Input Form
+    new_data = clean_data(data)
+    
     st.sidebar.title("Seller's Property Details")
-    property_types = ["House", "Apartment", "Condo", "Townhouse"]
-    price_ranges = ["$10 - $500", "$500 - $1000", "$1000- $5000", "$5000 - $10000", "$10000 - $50000"]
+    
+    
+    # property_types = ["House", "Apartment", "Condo", "Townhouse"]
+    # price_ranges = ["$10 - $500", "$500 - $1000", "$1000- $5000", "$5000 - $10000", "$10000 - $50000"]
 
     # Dropdown for Property Type
-    property_type = st.sidebar.selectbox("Property Type", property_types)
+    property_type = st.sidebar.selectbox("Property Type", new_data['property_category'].unique())
 
     # Dropdown for Price Range
-    price_range = st.sidebar.selectbox("Price Range", price_ranges)
+    price_range = st.sidebar.selectbox("Price Range", sorted(new_data['price_range'].unique()))
 
     # Number inputs for Bedrooms, Bathrooms, Beds, etc.
     bedrooms = st.sidebar.number_input("Number of Bedrooms", min_value=1, max_value=10, value=1)
