@@ -138,7 +138,7 @@ if st.session_state.page == "buyer":
 # Seller Page
 elif st.session_state.page == "seller":
     # Sidebar for Seller Input Form
-    new_data = clean_data(data)
+    # new_data = clean_data(data)
     
     st.sidebar.title("Seller's Property Details")
 
