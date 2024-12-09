@@ -76,7 +76,6 @@ if st.session_state.page == "main":
 
 # Fetch data from Backblaze
 data = fetch_data()
-print(data.head(5))
 if data is not None:
     st.write("Data loaded successfully.")
     st.dataframe(data.head())
