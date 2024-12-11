@@ -293,7 +293,8 @@ def main():
 
         st.markdown("Provide neighborhood name")
         st.markdown("<h2 style='font-size: 30px;'>Host Neighborhood</h2>", unsafe_allow_html=True)
-        host_neighborhood = st.text_area("Host Neighborhood")
+        host_neighborhood = st.text_area("", placeholder="Describe the host neighborhood...")
+        # host_neighborhood = st.text_area("Host Neighborhood")
 
         st.markdown("Provide amenities your property offers")
         amenities = st.text_area("Amenities")
