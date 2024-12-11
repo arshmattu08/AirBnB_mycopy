@@ -18,6 +18,11 @@ __Seller-Focused Predictions:__
 Hosts can input property details, such as accommodations, amenities, and neighborhood descriptions, to predict a potential review score for their listings.
 The prediction leverages a trained linear regression model that uses features such as the sentiment of the neighborhood overview and property details to estimate the likely review score.
 
+__Data Description:__
+Our app runs based on the dataset we got from InsideAirbnb: https://insideairbnb.com/get-the-data/
+The dataset includes columns like neighborhood overview, latitude and longitude, property type, room type, price, rating scores, etc. 
+
+
 
 __Tools Used:__
 
