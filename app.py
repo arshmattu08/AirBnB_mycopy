@@ -293,11 +293,11 @@ def main():
         price = st.number_input("", min_value=10, step=1, label_visibility="collapsed")
         # price = st.number_input("Price (USD)", min_value=10, step=1)
 
-        st.markdown("<h2 style='font-size: 18px;'>Neighborhood Overview</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='font-size: 18px;'>Host Neighborhood</h2>", unsafe_allow_html=True)
         neighborhood_overview = st.text_area("", placeholder="Describe the host neighborhood...")
         # neighborhood_overview = st.text_area("Neighborhood Overview")
 
-        st.markdown("<h2 style='font-size: 18px;'>Host Neighborhood</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='font-size: 18px;'>Neighborhood Overview</h2>", unsafe_allow_html=True)
         host_neighborhood = st.text_area("", placeholder="Provide neighborhood name..")
         # host_neighborhood = st.text_area("Host Neighborhood")
 
