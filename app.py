@@ -273,10 +273,13 @@ def main():
         st.header("Seller Page")
 
         # User inputs for prediction
-        accommodates = st.number_input("Accommodates", min_value=1, step=1)
-        bathrooms = st.number_input("Bathrooms", min_value=0.5, step=0.5)
-        bedrooms = st.number_input("Bedrooms", min_value=1, step=1)
-        beds = st.number_input("Beds", min_value=1, step=1)
+        st.markdown("Provide number of people your property can accommodate.")
+        accommodates = st.number_input("Accommodates", min_value=1, step=1, max_value = 500)
+        bathrooms = st.number_input("Bathrooms", min_value=0.5, step=0.5, max_value=100)
+        bedrooms = st.number_input("Bedrooms", min_value=1, step=1, max_value= 100)
+        beds = st.number_input("Beds", min_value=1, step=1, max_value = 500)
+
+        st.markdown("Provide approximate price for your property.")
         price = st.number_input("Price (USD)", min_value=10, step=1)
         neighborhood_overview = st.text_area("Neighborhood Overview")
         host_neighborhood = st.text_area("Host Neighborhood Description")
