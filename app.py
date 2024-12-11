@@ -286,7 +286,7 @@ def main():
         # bedrooms = st.number_input("Bedrooms", min_value=1, step=1, max_value= 100)
 
         st.markdown("<h2 style='font-size: 18px;'>Beds</h2>", unsafe_allow_html=True)
-        beds = st.number_input("", min_value=1, step=1, max_value = 500, label_visibility="collapsed")
+        beds = st.number_input("", min_value=1, step=1, max_value = 500, label_visibility="collapsed",key="price_input")
         # beds = st.number_input("Beds", min_value=1, step=1, max_value = 500)
 
         st.markdown("<h2 style='font-size: 18px;'>Price</h2>", unsafe_allow_html=True)
