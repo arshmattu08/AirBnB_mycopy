@@ -286,7 +286,7 @@ def main():
         # bedrooms = st.number_input("Bedrooms", min_value=1, step=1, max_value= 100)
 
         st.markdown("<h2 style='font-size: 18px;'>Beds</h2>", unsafe_allow_html=True)
-        beds = st.number_input("", min_value=1, step=1, max_value = 500, label_visibility="collapsed",key="price_input")
+        beds = st.number_input("", min_value=1, step=1, max_value = 500, label_visibility="collapsed",key="beds_input")
         # beds = st.number_input("Beds", min_value=1, step=1, max_value = 500)
 
         st.markdown("<h2 style='font-size: 18px;'>Price</h2>", unsafe_allow_html=True)
@@ -298,14 +298,16 @@ def main():
         # neighborhood_overview = st.text_area("Neighborhood Overview")
 
         st.markdown("<h2 style='font-size: 18px;'>Host Neighborhood</h2>", unsafe_allow_html=True)
-        host_neighborhood = st.text_area("", placeholder="Provide neighborhood name")
+        host_neighborhood = st.text_area("", placeholder="Provide neighborhood name..")
         # host_neighborhood = st.text_area("Host Neighborhood")
 
-        st.markdown("Provide amenities your property offers")
-        amenities = st.text_area("Amenities")
+        st.markdown("<h2 style='font-size: 18px;'>Amenities</h2>", unsafe_allow_html=True)
+        amenities = st.text_area("", placeholder="Provide available amenities..")
+        # amenities = st.text_area("Amenities")
 
-        st.markdown("Select property type")
-        property_type = st.selectbox("Property Type", ["Apartment", "House", "Condo", "unknown"])
+        st.markdown("<h2 style='font-size: 18px;'>property_type</h2>", unsafe_allow_html=True)
+        property_type = st.selectbox("", ["Apartment", "House", "Condo", "Unknown"])
+        # property_type = st.selectbox("Property Type", ["Apartment", "House", "Condo", "unknown"])
 
         # Sentiment Analysis
         analyzer = SentimentIntensityAnalyzer()
