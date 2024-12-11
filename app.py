@@ -305,7 +305,7 @@ def main():
         amenities = st.text_area("", placeholder="Provide available amenities..")
         # amenities = st.text_area("Amenities")
 
-        st.markdown("<h2 style='font-size: 18px;'>property_type</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='font-size: 18px;'>Property Type</h2>", unsafe_allow_html=True)
         property_type = st.selectbox("", ["Apartment", "House", "Condo", "Unknown"])
         # property_type = st.selectbox("Property Type", ["Apartment", "House", "Condo", "unknown"])
 
