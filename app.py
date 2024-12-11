@@ -275,15 +275,29 @@ def main():
         # User inputs for prediction
         st.markdown("Provide number of people your property can accommodate.")
         accommodates = st.number_input("Accommodates", min_value=1, step=1, max_value = 500)
+
+        st.markdown("Provide number of bathrooms for your property")
         bathrooms = st.number_input("Bathrooms", min_value=0.5, step=0.5, max_value=100.0)
+
+        st.markdown("Provide number of bedrooms")
         bedrooms = st.number_input("Bedrooms", min_value=1, step=1, max_value= 100)
+
+        st.markdown("Provide number of beds")
         beds = st.number_input("Beds", min_value=1, step=1, max_value = 500)
 
         st.markdown("Provide approximate price for your property.")
         price = st.number_input("Price (USD)", min_value=10, step=1)
+
+        st.markdown("Description of your neighborhood")
         neighborhood_overview = st.text_area("Neighborhood Overview")
-        host_neighborhood = st.text_area("Host Neighborhood Description")
+
+        st.markdown("Provide neighborhood name")
+        host_neighborhood = st.text_area("Host Neighborhood")
+
+        st.markdown("Provide amenities your property offers")
         amenities = st.text_area("Amenities")
+
+        st.markdown("Select property type")
         property_type = st.selectbox("Property Type", ["Apartment", "House", "Condo", "unknown"])
 
         # Sentiment Analysis
