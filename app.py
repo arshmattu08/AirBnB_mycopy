@@ -273,27 +273,32 @@ def main():
         st.header("Seller Page")
 
         # User inputs for prediction
-        st.markdown("Provide number of people your property can accommodate.")
-        accommodates = st.number_input("Accommodates", min_value=1, step=1, max_value = 500)
+        st.markdown("<h2 style='font-size: 10px;'>Accommodates</h2>", unsafe_allow_html=True)
+        accommodates = st.number_input("", min_value=11, step=1,max_value = 500, label_visibility="collapsed")
+        # accommodates = st.number_input("Accommodates", min_value=1, step=1, max_value = 500)
 
-        st.markdown("Provide number of bathrooms for your property")
-        bathrooms = st.number_input("Bathrooms", min_value=0.5, step=0.5, max_value=100.0)
+        st.markdown("<h2 style='font-size: 10px;'>Bathrooms</h2>", unsafe_allow_html=True)
+        bathrooms = st.number_input("", min_value=0.5, step=0.5, max_value=100.0, label_visibility="collapsed")
+        # bathrooms = st.number_input("Bathrooms", min_value=0.5, step=0.5, max_value=100.0)
 
-        st.markdown("Provide number of bedrooms")
-        bedrooms = st.number_input("Bedrooms", min_value=1, step=1, max_value= 100)
+        st.markdown("<h2 style='font-size: 10px;'>Bedrooms</h2>", unsafe_allow_html=True)
+        bedrooms = st.number_input("", min_value=1, step=1, max_value=100, label_visibility="collapsed")
+        # bedrooms = st.number_input("Bedrooms", min_value=1, step=1, max_value= 100)
 
-        st.markdown("Provide number of beds")
-        beds = st.number_input("Beds", min_value=1, step=1, max_value = 500)
+        st.markdown("<h2 style='font-size: 10px;'>Beds</h2>", unsafe_allow_html=True)
+        beds = st.number_input("", min_value=1, step=1, max_value = 500, label_visibility="collapsed")
+        # beds = st.number_input("Beds", min_value=1, step=1, max_value = 500)
 
-        st.markdown("Provide approximate price for your property.")
-        price = st.number_input("Price (USD)", min_value=10, step=1)
+        st.markdown("<h2 style='font-size: 10px;'>Price</h2>", unsafe_allow_html=True)
+        price = st.number_input("", min_value=10, step=1, label_visibility="collapsed")
+        # price = st.number_input("Price (USD)", min_value=10, step=1)
 
-        st.markdown("Description of your neighborhood")
-        neighborhood_overview = st.text_area("Neighborhood Overview")
+        st.markdown("<h2 style='font-size: 10px;'>Neighborhood Overview</h2>", unsafe_allow_html=True)
+        neighborhood_overview = st.text_area("", placeholder="Describe the host neighborhood...")
+        # neighborhood_overview = st.text_area("Neighborhood Overview")
 
-        st.markdown("Provide neighborhood name")
-        st.markdown("<h2 style='font-size: 30px;'>Host Neighborhood</h2>", unsafe_allow_html=True)
-        host_neighborhood = st.text_area("", placeholder="Describe the host neighborhood...")
+        st.markdown("<h2 style='font-size: 10px;'>Host Neighborhood</h2>", unsafe_allow_html=True)
+        host_neighborhood = st.text_area("", placeholder="Provide neighborhood name")
         # host_neighborhood = st.text_area("Host Neighborhood")
 
         st.markdown("Provide amenities your property offers")
