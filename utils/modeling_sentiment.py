@@ -31,7 +31,7 @@ def load_and_preprocess_data():
         b2.set_bucket(bucket_name)
         
         # Retrieve the file from Backblaze
-        obj = b2.get_object('Final_PROJ.xlsx')
+        obj = b2.get_object('Cleaned_Austin_AirBnB.xlsx')
         if obj is None:
             raise ValueError("Failed to get the object from Backblaze bucket")
         
