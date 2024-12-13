@@ -37,7 +37,7 @@ b2 = B2(
 def fetch_data():
     try:
         b2.set_bucket(os.getenv('B2_BUCKETNAME'))  
-        obj = b2.get_object('Final_PROJ.xlsx')  #Exact Name of File
+        obj = b2.get_object('Cleaned_Austin_AirBnB.xlsx')  #Exact Name of File
 
         # Convert the StreamingBody object to a BytesIO object
         # Done to combat Error
@@ -360,6 +360,7 @@ def main():
             # st.write(f"The predicted review score for your listing is: {predicted_score:.2f}")
             st.markdown(f"<h2 style='font-size: 36px; color: #FF5733; font-weight: bold;'>The predicted review score for your listing is: {predicted_score:.2f}</h2>", 
     unsafe_allow_html=True)
+            
              # Footer
     st.markdown("""
         <div class="footer">
